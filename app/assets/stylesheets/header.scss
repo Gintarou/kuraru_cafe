@@ -1,0 +1,28 @@
+header{
+  height: 90px;
+  line-height: 90px;
+  background-color: rgba(255, 255, 255, 0.7)
+}
+
+#logo{
+  float: left;
+  font-family: 'Comfortaa',sans-serif;
+  font-size: 40px;
+}
+
+#header_nav{
+  float: right;
+}
+
+#header_ul{
+  >li{
+    float: left;
+    padding-left: 26px;
+    font-size: 14px;
+    >a{
+      &:hover{
+        color: skyblue;
+      }
+    }
+  }
+}
