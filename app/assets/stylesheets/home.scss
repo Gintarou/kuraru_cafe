@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 @media screen and (max-width: 1068px) {
+=======
+@media screen and (max-width: 559px) {
+>>>>>>> static-pages
   *{
-    background-color: yellow !important;
+    background-color: yellow!important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  *{
+    background-color: skyblue!important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  *{
+    background-color: pink!important;
   }
 }
