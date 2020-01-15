@@ -1,8 +1,5 @@
-@media screen and (min-width: 1000px) {
-#home_first{
-  width: 100%;
-  background-image: url('home_first_bg.png');
-  background-size: cover;
-  height: 700px;
-}
+@media screen and (min-width: 1068px) {
+  *{
+    background-color: yellow !important;
+  }
 }
