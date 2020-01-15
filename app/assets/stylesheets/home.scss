@@ -1,17 +1,16 @@
-@media screen and (max-width: 559px) {
+// タブレット
+*{
+  background-color: pink;
+}
+
+@media screen and (max-width: 559px) { //スマホ
   *{
-    background-color: yellow!important;
+    background-color: skyblue;
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (min-width: 960px) { //PC
   *{
-    background-color: skyblue!important;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  *{
-    background-color: pink!important;
+    background-color: yellow;
   }
 }
