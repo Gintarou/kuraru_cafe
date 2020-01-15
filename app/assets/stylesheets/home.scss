@@ -3,13 +3,15 @@
   background-color: pink;
 }
 
-@media screen and (max-width: 559px) { //スマホ
+// スマホ
+@media screen and (max-width: 559px) {
   *{
     background-color: skyblue;
   }
 }
 
-@media screen and (min-width: 960px) { //PC
+// PC
+@media screen and (min-width: 960px) {
   *{
     background-color: yellow;
   }
