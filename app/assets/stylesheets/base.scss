@@ -39,6 +39,7 @@ section{
   transition: 0.2s;
   border-radius: 2px;
   font-size: 18px;
+  font-family: 'Noto Sans JP', sans-serif;
   &:hover{
     opacity: 0.8;
     background-color: rgb(30,30,30);
@@ -48,6 +49,7 @@ section{
 
 .button_c{
   display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
   background-color: white;
   border-width: 2px !important;
   border: solid;
