@@ -1,5 +1,16 @@
+// タブレット
 footer{
   background-color: rgb(38, 38, 37);
   width: 100%;
   color: white;
+}
+
+// スマホ
+@media screen and (max-width: 559px) {
+
+}
+
+// PC
+@media screen and (min-width: 960px) {
+
 }

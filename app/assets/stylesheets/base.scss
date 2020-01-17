@@ -2,7 +2,57 @@ body{
   text-align: center;
 }
 
+article{
+  background-image: url('main_bg.jpeg');
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
 .container{
   width: 80%;
   margin: 0 auto;
 }
+
+section{
+  padding: 0 0 50px !important;
+  > h2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    padding: 50px 0;
+    letter-spacing: 2px;
+  }
+  > p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+.button{
+  display: inline-block;
+  // background-color: rgb(95,155,205);
+  // color: rgb(240, 240, 240);
+  border: solid;
+  width: 310px;
+  padding: 22px 0;
+  transition: 0.2s;
+  border-radius: 2px;
+  font-size: 18px;
+  &:hover{
+    opacity: 0.8;
+    background-color: rgb(30,30,30);
+    color: rgb(240,240,240);
+  }
+}
+
+@media screen and (min-width: 960px){
+  .button{
+    margin: 50px 0 0 730px;
+  }
+}
+
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Noto Sans JP', sans-serif;
+// font-family: 'Open Sans', sans-serif;

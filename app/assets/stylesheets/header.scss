@@ -1,25 +1,51 @@
+// タブレット
+
+
+// スマホ
+@media screen and (max-width: 559px) {
+
+}
+
+// PC
+@media screen and (min-width: 960px) {
+  header{
+    height: 100px;
+    line-height: 100px;
+  }
+
+  #logo{
+    float: left;
+    font-size: 40px;
+  }
+
+  #header_nav{
+    float: right;
+  }
+
+  #header_ul{
+    >li{
+      float: left;
+      padding-left: 26px;
+      font-size: 13px;
+    }
+  }
+}
+
 header{
-  height: 90px;
-  line-height: 90px;
-  background-color: rgba(255, 255, 255, 0.7)
-}
-
-#logo{
-  float: left;
-  font-family: 'Comfortaa',sans-serif;
-  font-size: 40px;
-}
-
-#header_nav{
-  float: right;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  transition: 1s;
 }
 
 #header_ul{
   >li{
-    float: left;
-    padding-left: 26px;
-    font-size: 14px;
+    letter-spacing: 2px;
     >a{
+      transition: 0.2s !important;
       &:hover{
         color: skyblue;
       }

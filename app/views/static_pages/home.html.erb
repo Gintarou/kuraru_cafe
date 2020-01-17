@@ -1,8 +1,27 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-
-<article class="">
+<article>
   <section id="home_first">
-
+  </section>
+  <section id="home_about">
+    <h2>ABOUT&nbsp;US</h2>
+    <p>kuraru caffe くらるカフェです。東大阪にある古民家、蔵をリノベーションしたカフェ。</p>
+    <p>コンセプトは、体は食べたもので出来ている。オーガニックフード中心のカフェ。イベントもたくさん実施してます。</p>
+    <%= link_to "Kuraru Caffeについて", about_path, class:"button" %>
+  </section>
+  <section id="home_menu">
+    <h2>MENU</h2>
+    <div class="menu">
+      <img src="" alt="menu">
+    </div>
+    <div class="menu">
+      <img src="" alt="menu">
+    </div>
+    <div class="menu">
+      <img src="" alt="menu">
+    </div>
+    <%= link_to "MENU一覧", menu_path, class:"button" %>
+  </section>
+  <section id="home_information">
+    <%= link_to "レンタルのご予約", rental_path, class:"button" %>
+    <%= link_to "ご予約・お問い合わせ", menu_path, class:"button" %>
   </section>
 </article>
