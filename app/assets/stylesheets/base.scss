@@ -3,8 +3,8 @@ body{
 }
 
 article{
-  background-image: url('main_bg.jpeg');
-  background-size: contain;
+  background-image: image-url('main_bg.jpeg');
+  background-size: 100% auto;
   background-repeat: repeat-y;
 }
 
