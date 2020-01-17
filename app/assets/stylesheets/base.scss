@@ -8,6 +8,10 @@ article{
   background-repeat: repeat-y;
 }
 
+h2, p, a, small{
+  font-family: 'Lato', sans-serif !important;
+}
+
 .container{
   width: 80%;
   margin: 0 auto;
@@ -15,15 +19,14 @@ article{
 
 section{
   padding: 0 0 50px !important;
+  max-width: 1200px;
   > h2{
-    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 34px;
     padding: 50px 0;
     letter-spacing: 2px;
   }
   > p{
-    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 300;
     font-size: 16px;
   }
