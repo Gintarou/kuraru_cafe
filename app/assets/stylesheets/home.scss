@@ -1,5 +1,9 @@
 // タブレット
-
+#home_first{
+  background-image: url('./../images/home_first_bg.jpg');
+  width: 100%;
+  height: 550px;
+}
 // スマホ
 @media screen and (max-width: 559px) {
 
