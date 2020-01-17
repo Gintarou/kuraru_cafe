@@ -29,10 +29,27 @@ section{
   }
 }
 
-.button{
+.button_r{
   display: inline-block;
-  // background-color: rgb(95,155,205);
-  // color: rgb(240, 240, 240);
+  background-color: white;
+  border-width: 2px !important;
+  border: solid;
+  width: 310px;
+  padding: 22px 0;
+  transition: 0.2s;
+  border-radius: 2px;
+  font-size: 18px;
+  &:hover{
+    opacity: 0.8;
+    background-color: rgb(30,30,30);
+    color: rgb(240,240,240);
+  }
+}
+
+.button_c{
+  display: inline-block;
+  background-color: white;
+  border-width: 2px !important;
   border: solid;
   width: 310px;
   padding: 22px 0;
@@ -47,8 +64,12 @@ section{
 }
 
 @media screen and (min-width: 960px){
-  .button{
+  .button_r{
     margin: 50px 0 0 730px;
+  }
+
+  .button_c{
+    margin: 20px;
   }
 }
 
