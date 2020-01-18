@@ -6,6 +6,11 @@
 }
 // スマホ
 @media screen and (max-width: 559px) {
+
+  #home_first{
+    height: 500px;
+  }
+
   iframe{
     width: 100%;
   }
