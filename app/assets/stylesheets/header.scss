@@ -1,7 +1,45 @@
 // タブレット
 
+header{
+  height: 80px;
+  line-height: 80px;
+  > div{
+    width: 100%;
+  }
+}
+
+#ham{
+  display: none;
+}
+
+#logo{
+  font-size: 30px;
+  float: left;
+  padding-left: 30px;
+}
+
+#header_nav{
+  float: right;
+}
+
+#header_ul{
+  >li{
+    float: left;
+    padding: 0  20px;
+    font-size: 13px;
+  }
+}
+
 // スマホ
 @media screen and (max-width: 559px) {
+
+  header{
+    height: 70px;
+    line-height: 70px;
+    > div{
+      width: 100%;
+    }
+  }
 
   #header_nav{
     display: none;
@@ -15,18 +53,6 @@
     font-size: 25px;
     float: left;
     padding-left: 25px;
-  }
-
-  header{
-    height: 70px;
-    line-height: 70px;
-    > div{
-      width: 100%;
-    }
-  }
-
-  .container{
-
   }
 }
 
