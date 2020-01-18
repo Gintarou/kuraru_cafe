@@ -5,7 +5,7 @@
   height: 550px;
 }
 
-#home_menu, #home_about, #home_access_box{
+#home_menu, #home_about, .access_box{
   padding: 0 !important;
 }
 
@@ -13,7 +13,7 @@
   width: 30%;
 }
 
-#home_access_box{
+.access_box{
   width: 90%;
   margin: 0 auto;
   > div{
@@ -87,7 +87,7 @@
     padding: 0;
   }
 
-  #home_access_box{
+  .access_box{
     width: 100%;
     margin: 0 auto;
     padding: 0 !important;
@@ -150,7 +150,7 @@
     margin: auto;
   }
 
-  #home_access_box{
+  .access_box{
     width: 80%;
     margin: 0 auto;
     > div{
