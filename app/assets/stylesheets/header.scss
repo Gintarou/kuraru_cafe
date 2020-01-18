@@ -45,7 +45,7 @@ header{
     display: none;
   }
 
-  #ham{
+  #ham, .ham_link{
     display: block;
   }
 
@@ -59,7 +59,7 @@ header{
 // PC
 @media screen and (min-width: 960px) {
 
-  #ham{
+  #ham, .ham_link{
     display: none;
   }
 
