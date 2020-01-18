@@ -11,4 +11,12 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
+  <script type="text/javascript">
+    const ham = document.getElementById('ham');
+    const ham_menu_wrapper = document.getElementById('ham_menu_wrapper');
+    ham.addEventListener('click', function() {
+      ham.classList.toggle('clicked');
+      ham_menu_wrapper.classList.toggle('clicked');
+    });
+  </script>
 </html>

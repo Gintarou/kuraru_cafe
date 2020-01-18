@@ -1,16 +1,50 @@
 // タブレット
 
-
 // スマホ
 @media screen and (max-width: 559px) {
 
+  #header_nav{
+    display: none;
+  }
+
+  #ham{
+    display: block;
+  }
+
+  #logo{
+    font-size: 25px;
+    float: left;
+    padding-left: 25px;
+  }
+
+  header{
+    height: 70px;
+    line-height: 70px;
+    > div{
+      width: 100%;
+    }
+  }
+
+  .container{
+
+  }
 }
 
 // PC
 @media screen and (min-width: 960px) {
+
+  #ham{
+    display: none;
+  }
+
   header{
+    transition: 1s;
     height: 100px;
     line-height: 100px;
+    > div{
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   #logo{
@@ -31,16 +65,6 @@
   }
 }
 
-header{
-  font-family: 'Lato', sans-serif;
-  background-color: rgb(255, 255, 255);
-  position: fixed;
-  top: 0px;
-  z-index: 100;
-  width: 100%;
-  transition: 1s;
-}
-
 #header_ul{
   >li{
     letter-spacing: 2px;
@@ -51,4 +75,58 @@ header{
       }
     }
   }
+}
+
+header{
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+}
+
+.ham {
+	position: relative;
+	width: 70px;
+	height: 70px;
+  float: right;
+	background-color: white;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.ham_line {
+	position: absolute;
+	right: 17.5px;
+	width: 35px;
+	height: 2px;
+	background-color: #333333;
+}
+
+.ham_line1 {
+	top: 17.5px;
+}
+
+.ham_line2 {
+	top: 31.5px;
+}
+
+.ham_line3 {
+	top: 45.5px;
+}
+
+.ham_menu {
+	position: fixed;
+	width: 300px;
+	height: 350px;
+	right:  -400px;
+  top: 70px;
+	background-color: white;
+	transition: all 0.3s;
+}
+
+.clicked .ham_menu {
+	right: 0px;
 }
