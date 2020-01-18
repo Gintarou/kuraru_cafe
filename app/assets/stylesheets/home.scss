@@ -26,6 +26,11 @@
   #home_about{
     width: 90%;
     margin: 0 auto;
+    padding: 0 !important;
+  }
+
+  #home_menu{
+    padding: 0 !important;
   }
 
   .menu_img{
@@ -37,6 +42,7 @@
   #home_access_box{
     width: 100%;
     margin: 0 auto;
+    padding: 0 !important;
     > div{
       vertical-align: top;
       width: 100%;
