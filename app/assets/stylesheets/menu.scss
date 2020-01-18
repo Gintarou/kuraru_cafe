@@ -1,0 +1,19 @@
+// タブレット
+
+
+// スマホ
+@media screen and (max-width: 559px) {
+
+}
+
+// PC
+@media screen and (min-width: 960px) {
+
+}
+
+#menu_first{
+  background-image: url('./../images/menu_bg.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+}
