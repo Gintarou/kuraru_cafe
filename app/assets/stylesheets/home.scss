@@ -9,6 +9,55 @@
   iframe{
     width: 100%;
   }
+
+  .button{
+    margin: 50px 0 0;
+    width: 250px !important;
+  }
+
+  #home_about{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .menu_img{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #home_access_box{
+    width: 100%;
+    margin: 0 auto;
+    > div{
+      vertical-align: top;
+      width: 100%;
+      display: inline-block;
+      > iframe{
+        width: 100vw;
+        height: 300px;
+      }
+    }
+  }
+  .access_info{
+    padding: 10px 0 0;
+  }
+
+  .access_info_bg{
+    background-color: rgb(60,60,60);
+    color: white;
+    width: 120px;
+    padding: 2px 0 0;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .access_info_txt{
+    margin: 10px;
+    font-size: 16px;
+  }
+
 }
 
 // PC
@@ -73,9 +122,5 @@
 
   .button_c{
     margin: 20px;
-  }
-
-  #home_information{
-
   }
 }

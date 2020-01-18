@@ -5,14 +5,14 @@
     <h2>ABOUT&nbsp;US</h2>
     <p>kuraru caffe くらるカフェです。東大阪にある古民家、蔵をリノベーションしたカフェ。</p>
     <p>コンセプトは、体は食べたもので出来ている。オーガニックフード中心のカフェ。イベントもたくさん実施してます。</p>
-    <%= link_to "Kuraru Caffeについて", about_path, class:"button_r" %>
+    <%= link_to "Kuraru Caffeについて", about_path, class:"button button_r" %>
   </section>
   <section id="home_menu">
     <h2>MENU</h2>
-    <!--<%= image_tag("home_menu1.jpg", alt:"menu ") %>
-    <%= image_tag("home_menu2.jpg", alt:"menu ") %>
-    <%= image_tag("home_menu3.jpg", alt:"menu ") %> -->
-    <%= link_to "MENU一覧へ", menu_path, class:"button_r" %>
+    <%= image_tag("home_menu1.jpg", alt:"menu", class:"menu_img") %>
+    <%= image_tag("home_menu2.jpg", alt:"menu", class:"menu_img") %>
+    <%= image_tag("home_menu3.jpg", alt:"menu", class:"menu_img") %>
+    <%= link_to "MENU一覧へ", menu_path, class:"button button_r" %>
   </section>
   <section id="home_access_box">
     <h2>ACCESS</h2>
@@ -35,10 +35,7 @@
         <p class="access_info_txt">JR西日本&nbsp;学研都市線&nbsp;八戸ノ里</p>
       </div>
       <div class="access_info">
-        <p class="access_info_bg">設備・サービス</p>
-        <p class="access_info_txt">&#9679;席数：店内&nbsp;:&nbsp;56席、テラス28席</p>
-        <p class="access_info_txt">&#9679;17時まではテラス席のみ17時以降は2階席とテラス席のみ</p>
-        <p class="access_info_txt">&#9679;駐車場割引&nbsp;:&nbsp;1時間（400円分）無料（&#8251;カフェスタッフに駐車券をご提示ください）</p>
+        <!-- <p class="access_info_bg">設備・サービス</p> -->
       </div>
     </div>
     <div>
@@ -46,7 +43,7 @@
     </div>
   </section>
   <section id="home_information">
-    <%= link_to "レンタルのご予約", rental_path, class:"button_c" %>
-    <%= link_to "ご予約・お問い合わせ", contact_path, class:"button_c" %>
+    <%= link_to "レンタルのご予約", rental_path, class:"button button_c" %>
+    <%= link_to "ご予約・お問い合わせ", contact_path, class:"button button_c" %>
   </section>
 </article>
