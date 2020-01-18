@@ -9,9 +9,11 @@
   </section>
   <section id="home_menu">
     <h2>MENU</h2>
-    <%= image_tag("home_menu1.jpg", alt:"menu", class:"menu_img") %>
-    <%= image_tag("home_menu2.jpg", alt:"menu", class:"menu_img") %>
-    <%= image_tag("home_menu3.jpg", alt:"menu", class:"menu_img") %>
+    <div id="home_images">
+      <%= image_tag("home_menu1.jpg", alt:"menu", class:"menu_img") %>
+      <%= image_tag("home_menu2.jpg", alt:"menu", class:"menu_img") %>
+      <%= image_tag("home_menu3.jpg", alt:"menu", class:"menu_img") %>
+    </div>
     <%= link_to "MENU一覧へ", menu_path, class:"button button_r" %>
   </section>
   <section id="home_access_box">

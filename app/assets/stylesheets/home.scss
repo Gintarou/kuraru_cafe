@@ -131,6 +131,7 @@
     background-image: url('./../images/home_first_bg.jpg');
     width: 100%;
     height: 550px;
+    background-size: cover;
   }
 
   #home_menu{
@@ -144,13 +145,18 @@
     }
   }
 
+  #home_images{
+    width: 80%;
+    margin: auto;
+  }
+
   #home_access_box{
     width: 80%;
     margin: 0 auto;
     > div{
       vertical-align: top;
       text-align: left;
-      width: 46%;
+      width: 44%;
       margin: 1%;
       display: inline-block;
       height: 550px;
@@ -181,10 +187,14 @@
   }
 
   .button_r{
-    margin: 50px 0 0 40%;
+    margin: 50px 0 0 50%;
   }
 
   .button_c{
     margin: 20px;
+  }
+
+  #home_information{
+    padding: 0 !important;
   }
 }
