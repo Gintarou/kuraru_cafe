@@ -8,8 +8,12 @@ article{
   background-repeat: repeat-y;
 }
 
-h2, p, a, small{
-  font-family: 'Lato', sans-serif !important;
+h2, small{
+  font-family: 'Lato', sans-serif;
+}
+
+p, a{
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 section{
@@ -21,7 +25,7 @@ section{
     letter-spacing: 2px;
   }
   > p{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
   }
 }

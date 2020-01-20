@@ -91,11 +91,16 @@ header{
   }
 }
 
+#logo{
+  font-family: 'Lato', sans-serif !important;
+}
+
 #header_ul{
   >li{
     letter-spacing: 2px;
     >a{
       transition: 0.2s !important;
+      font-family: 'Lato', sans-serif !important;
       &:hover{
         color: skyblue;
       }
@@ -104,7 +109,6 @@ header{
 }
 
 header{
-  font-family: 'Lato', sans-serif;
   background-color: white;
   position: fixed;
   top: 0px;
