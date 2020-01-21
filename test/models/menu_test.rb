@@ -3,17 +3,11 @@ require 'test_helper'
 class MenuTest < ActiveSupport::TestCase
 
   def setup
-    @menu = Menu.new(image:"test.jpg", name:"test_menu",
-    price:1000, commitment:"test<br>test<br>test", allergy:"卵")
+    @menu = Menu.new(name:"test",price:100,commitment:"testa;sdlkfja;sldkfj ;lksdjf",allergy:"卵")
   end
 
   test "should be valid" do
     assert @menu.valid?
-  end
-
-  test "image should be present" do
-    @menu.image = " "
-    assert_not @menu.valid?
   end
 
   test "name should be present" do
@@ -31,4 +25,8 @@ class MenuTest < ActiveSupport::TestCase
     assert_not @menu.valid?
   end
 
+  test "allergy should be present" do
+    @menu.allergy = " "
+    assert_not @menu.valid?
+  end
 end

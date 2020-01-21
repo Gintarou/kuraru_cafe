@@ -1,20 +1,13 @@
-<% provide(:title, @menu.name) %>
-<article>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <p><br></p>
-  <section>
-    <h1><%= @menu.name %></h1>
-    <!-- <%= image_tag "#{@menu.image}", :width => '200', :height => '200' %> -->
-    <img src="<%= #{@menu.image} %>" alt="">
-  </section>
-</article>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<% if @menu.image.attached? %>
+  <%= image_tag @menu.image %>
+<% end %>
+<p><%= @menu.name %></p>
+<p><%= @menu.price %></p>
+<p><%= @menu.commitment %></p>
+<p><%= @menu.allergy %></p>
