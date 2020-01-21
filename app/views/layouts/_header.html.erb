@@ -10,7 +10,10 @@
         <li><%= link_to "MENU", menus_path %></li>
         <li><%= link_to "RENTAL", rental_path %></li>
         <li><%= link_to "EVENT", rental_path %></li>
-        <!-- <li><%= link_to "CONTACT", contact_path %></li> -->
+        <% if logged_in? %>
+          <li><%= link_to "NEW", new_path %></li>
+          <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
+        <% end %>
       </ul>
     </nav>
 
@@ -27,7 +30,11 @@
           <li><%= link_to "ABOUT", about_path, class:"ham_link" %></li>
           <li><%= link_to "MENU", menus_path, class:"ham_link" %></li>
           <li><%= link_to "RENTAL", rental_path, class:"ham_link" %></li>
-          <li><%= link_to "CONTACT", contact_path, class:"ham_link" %></li>
+          <li><%= link_to "EVENT", rental_path, class:"ham_link" %></li>
+          <% if logged_in? %>
+            <li><%= link_to "NEW", new_path, class:"ham_link" %></li>
+            <li><%= link_to "LOGOUT", logout_path, method: :delete, class:"ham_link" %></li>
+          <% end %>
         </ul>
       </div>
     </div>

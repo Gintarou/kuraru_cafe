@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
   resources :lunch_menus
   resources :morning_menus
   root 'static_pages#home'
@@ -8,4 +7,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/menus', to: 'menu#index'
   get '/new', to: 'menu#new'
+  get 'users/new'
+  get '/login', to:'sessions#new'
+  post '/login', to:'sessions#create'
+  delete '/logout', to:'sessions#destroy'
 end

@@ -163,8 +163,8 @@ header{
 .ham_menu {
 	position: fixed;
 	width: 100%;
-	height: 350px;
-  top: -400px;
+	height: auto;
+  top: -600px;
 	background-color: rgba(30, 30, 30, 0.95);
 	transition: all 0.3s;
 }
