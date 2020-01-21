@@ -1,0 +1,21 @@
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<%= form_with model: @morning_menu, local: true  do |form| %>
+  <p>name</p>
+  <%= form.text_area :name %><br><br>
+  <p>image</p>
+  <p>※拡張子はjpgのみ対応です</p>
+  <%= form.file_field :morning_image %><br><br>
+  <p>price</p>
+  <%= form.text_area :price %><br><br>
+  <p>commitment</p>
+  <%= form.text_area :commitment %><br><br>
+  <p>allergy</p>
+  <%= form.text_area :allergy %><br><br>
+
+  <%= form.submit %>
+<% end %>

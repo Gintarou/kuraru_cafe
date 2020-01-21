@@ -1,0 +1,20 @@
+<% provide(:title, "Index") %>
+<article>
+  <section id="index_first">
+
+  </section>
+  <section>
+    <h2>MORNING&nbsp;MENU</h2>
+    <% @morning_menus.each do |m| %>
+      <%= link_to image_tag(m.morning_image), morning_menu_path(m) %>
+    <% end %>
+  </section>
+  <section>
+    <h2>LUNCH&nbsp;MENU</h2>
+
+    <% @lunch_menus.each do |m| %>
+      <%= link_to image_tag(m.lunch_image), lunch_menu_path(m) %>
+    <% end %>
+
+  </section>
+</article>

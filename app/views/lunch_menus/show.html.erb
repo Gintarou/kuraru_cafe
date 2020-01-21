@@ -1,0 +1,13 @@
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<% if @lunch_menu.lunch_image.attached? %>
+  <%= image_tag @lunch_menu.lunch_image %>
+<% end %>
+<p><%= @lunch_menu.name %></p>
+<p><%= @lunch_menu.price %></p>
+<p><%= @lunch_menu.commitment %></p>
+<p><%= @lunch_menu.allergy %></p>

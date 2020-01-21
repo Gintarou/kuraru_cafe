@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  price: 1
-  commitment: MyText
+  price: MyString
   allergy: MyString
+  commitment: MyText
 
 two:
   name: MyString
-  price: 1
-  commitment: MyText
+  price: MyString
   allergy: MyString
+  commitment: MyText

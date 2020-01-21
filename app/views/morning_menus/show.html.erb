@@ -1,0 +1,13 @@
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<% if @morning_menu.morning_image.attached? %>
+  <%= image_tag @morning_menu.morning_image %>
+<% end %>
+<p><%= @morning_menu.name %></p>
+<p><%= @morning_menu.price %></p>
+<p><%= @morning_menu.commitment %></p>
+<p><%= @morning_menu.allergy %></p>
