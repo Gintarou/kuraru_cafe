@@ -1,6 +1,9 @@
 class MorningMenusController < ApplicationController
 
   def new
+    if !logged_in?
+      redirect_to login_path
+    end
     @morning_menu = MorningMenu.new
   end
 

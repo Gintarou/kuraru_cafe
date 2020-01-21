@@ -1,6 +1,9 @@
 class LunchMenusController < ApplicationController
 
   def new
+    if !logged_in?
+      redirect_to login_path
+    end
     @lunch_menu = LunchMenu.new
   end
 
