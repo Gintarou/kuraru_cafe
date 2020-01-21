@@ -2,8 +2,7 @@ require 'test_helper'
 
 class MenuControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get menu_index_url
+    get menus_path
     assert_response :success
   end
-
 end

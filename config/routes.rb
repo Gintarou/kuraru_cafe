@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   resources :lunch_menus
   resources :morning_menus
   root 'static_pages#home'

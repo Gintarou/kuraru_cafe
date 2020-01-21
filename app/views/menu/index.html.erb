@@ -5,16 +5,18 @@
   </section>
   <section>
     <h2>MORNING&nbsp;MENU</h2>
-    <% @morning_menus.each do |m| %>
-      <%= link_to image_tag(m.morning_image), morning_menu_path(m) %>
+    <% @morning_menus.each do |mm| %>
+      <% if mm.morning_image.attached? %>
+        <%= link_to image_tag(mm.morning_image), morning_menu_path(mm) %>
+      <% end %>
     <% end %>
   </section>
   <section>
     <h2>LUNCH&nbsp;MENU</h2>
-
-    <% @lunch_menus.each do |m| %>
-      <%= link_to image_tag(m.lunch_image), lunch_menu_path(m) %>
+    <% @lunch_menus.each do |lm| %>
+      <% if lm.lunch_image.attached? %>
+        <%= link_to image_tag(lm.lunch_image), lunch_menu_path(lm) %>
+      <% end %>
     <% end %>
-
   </section>
 </article>
