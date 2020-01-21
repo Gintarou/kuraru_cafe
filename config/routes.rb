@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/rental', to: 'static_pages#rental'
   get '/contact', to: 'static_pages#contact'
-  get '/menu', to: 'static_pages#menu'
+  resources :menus
 end
