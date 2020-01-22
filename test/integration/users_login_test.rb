@@ -32,4 +32,52 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path, count: 0
     assert_select "a[href=?]", new_path, count: 0
   end
+
+  test "new page should redirect to login page when not logged in" do
+    get new_path
+    assert_redirected_to login_path
+  end
+
+  test "morning new page should redirect to login page when not logged in" do
+    get new_morning_menu_path
+    assert_redirected_to login_path
+  end
+
+  test "lunch new page should redirect to login page when not logged in" do
+    get new_lunch_menu_path
+    assert_redirected_to login_path
+  end
+
+  test "should get new page with logged in" do
+    get login_path
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
+    assert_redirected_to root_path
+    follow_redirect!
+    assert_template root_path
+    get new_path
+    assert_template 'menu/new'
+  end
+
+  test "should get morning new page with logged in" do
+    get login_path
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
+    assert_redirected_to root_path
+    follow_redirect!
+    assert_template root_path
+    get new_morning_menu_path
+    assert_template 'morning_menus/new'
+  end
+
+  test "should get lunch new page with logged in" do
+    get login_path
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
+    assert_redirected_to root_path
+    follow_redirect!
+    assert_template root_path
+    get new_lunch_menu_path
+    assert_template 'lunch_menus/new'
+  end
 end
