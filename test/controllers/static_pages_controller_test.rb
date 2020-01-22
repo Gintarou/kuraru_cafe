@@ -29,11 +29,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "#{@base_title} | Contact"
   end
-
-  # test "should get menu" do
-  #   get menu_path
-  #   assert_response :success
-  #   assert_select "title", "#{@base_title} | Menu"
-  # end
-
 end
