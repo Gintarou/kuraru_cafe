@@ -1,5 +1,5 @@
 class LunchMenusController < ApplicationController
-  before_action :logged_in_user, only: [:new, :edit]
+  before_action :admin_only_access, only: [:new, :edit]
 
   def new
     @lunch_menu = LunchMenu.new
@@ -38,6 +38,18 @@ class LunchMenusController < ApplicationController
 
     def lunch_menu_params
       params.require(:lunch_menu).permit(:lunch_image, :name, :price, :commitment, :allergy)
+    end
+
+    # adminユーザーではない場合loginページにリダイレクトさせる
+    def admin_only_access
+      if session[:user_id]
+        @user ||= User.find_by(id: session[:user_id])
+        if !@user.admin? &&  logged_in?
+          redirect_to root_path
+        end
+      else
+        redirect_to root_path
+      end
     end
 
 end

@@ -6,8 +6,9 @@ class MorningMenusTest < ActionDispatch::IntegrationTest
     @morning = morning_menus(:morning)
   end
 
-  test "morning edit page should redirected to login page when not logged in" do
+  #adminのときで考える 直さなくてもテストはパスする
+  test "morning edit page should redirected to root page when not logged in" do
     get edit_morning_menu_path(@morning)
-    assert_redirected_to login_path
+    assert_redirected_to root_path
   end
 end

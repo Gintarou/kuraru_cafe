@@ -22,4 +22,11 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  # 現在のユーザがadmin出ない場合rootにリダイレクトさせる
+  # def admin_only_access
+  #   if current_user.admin? && current_user
+  #     redirect_to root_path
+  #   end
+  # end
 end
