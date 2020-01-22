@@ -1,0 +1,9 @@
+<% if @lunch_menu.errors.any? %>
+  <p>The form contains <%= pluralize(@lunch_menu.errors.count, "error") %></p>
+  <p><br></p>
+  <ul>
+    <% @lunch_menu.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>

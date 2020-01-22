@@ -5,6 +5,9 @@
 <p><br></p>
 <p><br></p>
 <%= form_with model: @morning_menu, local: true  do |form| %>
+
+  <%= render 'shared/morning_menu_error_messages' %>
+
   <p>name</p>
   <%= form.text_area :name %><br><br>
   <p>image</p>

@@ -1,15 +1,21 @@
 class MorningMenusController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit]
+
+  def index
+    redirect_to menus_path
+  end
 
   def new
-    if !logged_in?
-      redirect_to login_path
-    end
     @morning_menu = MorningMenu.new
   end
 
   def create
-    @morning_menu = MorningMenu.create morning_menu_params
-    redirect_to @morning_menu
+    @morning_menu = MorningMenu.new(morning_menu_params)
+    if @morning_menu.save
+      redirect_to @morning_menu
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -22,8 +28,15 @@ class MorningMenusController < ApplicationController
 
   def update
     @morning_menu = MorningMenu.find(params[:id])
-    @morning_menu.update morning_menu_params
-    redirect_to @morning_menu
+    if @morning_menu.update_attributes(morning_menu_params)
+      redirect_to @morning_menu
+    else
+      render 'edit'
+    end
+  end
+
+  def delete
+
   end
 
   private

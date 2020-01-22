@@ -1,15 +1,17 @@
 class LunchMenusController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit]
 
   def new
-    if !logged_in?
-      redirect_to login_path
-    end
     @lunch_menu = LunchMenu.new
   end
 
   def create
-    @lunch_menu = LunchMenu.create lunch_menu_params
-    redirect_to @lunch_menu
+    @lunch_menu = LunchMenu.new(lunch_menu_params)
+    if @lunch_menu.save
+      redirect_to @lunch_menu
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -22,8 +24,14 @@ class LunchMenusController < ApplicationController
 
   def update
     @lunch_menu = LunchMenu.find(params[:id])
-    @lunch_menu.update lunch_menu_params
-    redirect_to @lunch_menu
+    if @lunch_menu.update_attributes(lunch_menu_params)
+      redirect_to @lunch_menu
+    else
+      render 'edit'
+    end
+  end
+
+  def delete
   end
 
   private
