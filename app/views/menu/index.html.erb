@@ -1,22 +1,25 @@
 <% provide(:title, "Menu") %>
 <article>
-  <section id="index_first" class="first">
-
+  <section id="menus_first" class="first">
   </section>
   <section>
     <h2>MORNING&nbsp;MENU</h2>
-    <% @morning_menus.each do |mm| %>
-      <% if mm.morning_image.attached? %>
-        <%= link_to image_tag(mm.morning_image), morning_menu_path(mm) %>
+    <div class="images">
+      <% @morning_menus.each do |mm| %>
+        <% if mm.morning_image.attached? %>
+          <%= link_to image_tag(mm.morning_image, alt:"menu", class:"menu_img"), morning_menu_path(mm) %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </section>
   <section>
     <h2>LUNCH&nbsp;MENU</h2>
-    <% @lunch_menus.each do |lm| %>
-      <% if lm.lunch_image.attached? %>
-        <%= link_to image_tag(lm.lunch_image), lunch_menu_path(lm) %>
+    <div class="images">
+      <% @lunch_menus.each do |lm| %>
+        <% if lm.lunch_image.attached? %>
+          <%= link_to image_tag(lm.lunch_image, alt:"menu", class:"menu_img"), lunch_menu_path(lm) %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </section>
 </article>
