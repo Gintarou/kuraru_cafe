@@ -10,7 +10,7 @@
         <li><%= link_to "MENU", menus_path %></li>
         <li><%= link_to "RENTAL", rental_path %></li>
         <li><%= link_to "EVENT", rental_path %></li>
-        <% if logged_in? %>
+        <% if logged_in? && @user.admin? %>
           <li><%= link_to "NEW", new_path %></li>
           <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
         <% end %>
