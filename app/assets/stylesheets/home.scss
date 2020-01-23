@@ -1,8 +1,6 @@
 // タブレット
 #home_first{
   background-image: url('./../images/home_first_bg.jpg');
-  width: 100%;
-  height: 550px;
 }
 
 #home_menu, #home_about, .access_box{
@@ -56,10 +54,7 @@
 @media screen and (max-width: 559px) {
 
   #home_first{
-    height: 300px;
     background-image: url('./../images/home_first_bg.jpg');
-    width: 100%;
-    background-size: cover;
   }
 
   iframe{
@@ -129,9 +124,6 @@
 @media screen and (min-width: 960px) {
   #home_first{
     background-image: url('./../images/home_first_bg.jpg');
-    width: 100%;
-    height: 550px;
-    background-size: cover;
   }
 
   #home_menu{
