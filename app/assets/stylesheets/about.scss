@@ -8,7 +8,22 @@
 
 // PC
 @media screen and (min-width: 960px) {
+  tr{
+    height: 80px;
+    border-bottom: solid 1px #aaa !important;
+    line-height: 80px;
+  }
 
+  th{
+    width: 300px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  td{
+    font-size: 16px;
+    width: 400px;
+  }
 }
 
 #about_first{
@@ -30,19 +45,12 @@
   font-weight: 400;
 }
 
-tr{
-  height: 80px;
-  border-bottom: solid 1px #aaa !important;
-  line-height: 80px;
-}
-
-th{
-  width: 300px;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-td{
-  font-size: 16px;
-  width: 400px;
+#about_access_box{
+  width: 80%;
+  margin: 0 auto;
+  >iframe{
+    padding: 100px 0;
+    width: 100% !important;
+    height: 500px !important;
+  }
 }
