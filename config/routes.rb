@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get '/menus', to: 'menu#index'
   get '/new', to: 'menu#new'
   get '/login', to:'sessions#new'
-  resources :users
-  get '/signup', to:'users#new'
-  post '/signup', to:'users#create'
+  # resources :users
+  # get '/signup', to:'users#new'
+  # post '/signup', to:'users#create'
   post '/login', to:'sessions#create'
   delete '/logout', to:'sessions#destroy'
 end
