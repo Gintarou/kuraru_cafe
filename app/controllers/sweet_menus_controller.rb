@@ -1,4 +1,4 @@
-class MorningMenusController < ApplicationController
+class SweetMenusController < ApplicationController
   before_action :admin_only_access, only: [:new, :edit]
 
   def index
@@ -6,30 +6,30 @@ class MorningMenusController < ApplicationController
   end
 
   def new
-    @morning_menu = MorningMenu.new
+    @sweet_menu = SweetMenu.new
   end
 
   def create
-    @morning_menu = MorningMenu.new(morning_menu_params)
-    if @morning_menu.save
-      redirect_to @morning_menu
+    @sweet_menu = SweetMenu.new(sweet_menu_params)
+    if @sweet_menu.save
+      redirect_to @sweet_menu
     else
       render 'new'
     end
   end
 
   def show
-    @morning_menu = MorningMenu.find(params[:id])
+    @sweet_menu = SweetMenu.find(params[:id])
   end
 
   def edit
-    @morning_menu = MorningMenu.find(params[:id])
+    @sweet_menu = SweetMenu.find(params[:id])
   end
 
   def update
-    @morning_menu = MorningMenu.find(params[:id])
-    if @morning_menu.update_attributes(morning_menu_params)
-      redirect_to @morning_menu
+    @sweet_menu = SweetMenu.find(params[:id])
+    if @sweet_menu.update_attributes(sweet_menu_params)
+      redirect_to @sweet_menu
     else
       render 'edit'
     end
@@ -41,8 +41,8 @@ class MorningMenusController < ApplicationController
 
   private
 
-    def morning_menu_params
-      params.require(:morning_menu).permit(:morning_image, :name, :price, :commitment, :allergy)
+    def sweet_menu_params
+      params.require(:sweet_menu).permit(:sweet_image, :name, :price, :commitment, :allergy)
     end
 
     # adminユーザーではない場合loginページにリダイレクトさせる

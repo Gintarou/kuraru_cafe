@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :drink_menus
   resources :lunch_menus
   resources :morning_menus
+  resources :sweet_menus
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
   get '/rental', to: 'static_pages#rental'

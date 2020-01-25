@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_055618) do
+ActiveRecord::Schema.define(version: 2020_01_25_114340) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2020_01_22_055618) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "drink_menus", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "allergy"
+    t.text "commitment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lunch_menus", force: :cascade do |t|
     t.string "name"
     t.string "price"
@@ -43,6 +52,15 @@ ActiveRecord::Schema.define(version: 2020_01_22_055618) do
   end
 
   create_table "morning_menus", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "allergy"
+    t.text "commitment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sweet_menus", force: :cascade do |t|
     t.string "name"
     t.string "price"
     t.string "allergy"

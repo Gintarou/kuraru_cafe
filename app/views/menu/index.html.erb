@@ -22,4 +22,32 @@
       <% end %>
     </div>
   </section>
+  <section>
+    <h2>SWEET&nbsp;MENU</h2>
+    <div class="images">
+      <% @sweet_menus.each do |sm| %>
+        <% if sm.sweet_image.attached? %>
+          <%= link_to image_tag(sm.sweet_image, alt:"menu", class:"menu_img"), sweet_menu_path(sm) %>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+  <section>
+    <h2>DRINK&nbsp;MENU</h2>
+    <div id="drink_menus">
+      <% @drink_menus.each do |dm| %>
+      <div class="drink_menu">
+        <% if dm.drink_image.attached? %>
+          <%= image_tag(dm.drink_image, alt:'drink', class: "drink_img") %>
+        <% end %>
+        <ul class="drink_info">
+          <li class="drink_name"><%= dm.name %></li>
+          <li class="drink_price">&#xffe5;<%= dm.price %></li>
+          <li class="drink_txt"><%= dm.commitment %></li>
+          <li class="drink_txt"><%= dm.allergy %></li>
+        </ul>
+      </div>
+      <% end %>
+    </div>
+  </section>
 </article>

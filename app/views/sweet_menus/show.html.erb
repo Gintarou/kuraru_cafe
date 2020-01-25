@@ -1,0 +1,13 @@
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<% if @sweet_menu.sweet_image.attached? %>
+  <%= image_tag @sweet_menu.sweet_image %>
+<% end %>
+<p><%= @sweet_menu.name %></p>
+<p><%= @sweet_menu.price %></p>
+<p><%= @sweet_menu.commitment %></p>
+<p><%= @sweet_menu.allergy %></p>

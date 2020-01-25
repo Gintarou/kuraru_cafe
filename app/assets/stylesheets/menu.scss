@@ -1,16 +1,95 @@
 // タブレット
+#drink_menus{
+  width: 95%;
+}
+
+.drink_info{
+  font-size: 16px;
+  >li{
+    padding: 6px 0;
+  }
+}
+
+.drink_menu{
+  width: 29%;
+  margin: 20px 2%;
+}
+
+.drink_img{
+  width: 100%;
+  height: auto;
+}
 
 
 // スマホ
 @media screen and (max-width: 559px) {
 
+  #drink_menus{
+    width: 98%;
+  }
+
+  .drink_info{
+    font-size: 16px;
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .drink_menu{
+    width: 48%;
+    margin: 10px 1%;
+  }
+
+  .drink_img{
+    display: none;
+  }
 }
 
 // PC
 @media screen and (min-width: 960px) {
+  #drink_menus{
+    width: 80%;
+  }
 
+  .drink_info{
+    font-size: 16px;
+    >li{
+      padding: 6px 0;
+    }
+  }
+
+  .drink_menu{
+    width: 29%;
+    margin: 20px 2%;
+  }
+
+  .drink_img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 #menus_first{
   background-image: url('./../images/menus_bg.jpg');
+}
+
+#drink_menus{
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.drink_menu{
+  float: left;
+}
+
+.drink_img{
+  height: auto;
+}
+
+.drink_info{
+  text-align: left;
+}
+
+.drink_name{
+  font-weight: bold;
 }
