@@ -35,7 +35,7 @@ class MorningMenusController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @morning_menu = MorningMenu.find(params[:id])
     @morning_menu.delete
     redirect_to menus_path

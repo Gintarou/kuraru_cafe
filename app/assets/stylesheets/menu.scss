@@ -13,6 +13,7 @@
 .drink_menu{
   width: 29%;
   margin: 20px 2%;
+  float: none;
 }
 
 .drink_img{
@@ -26,7 +27,7 @@
 @media screen and (max-width: 559px) {
 
   #drink_menus{
-    width: 98%;
+    width: 90%;
   }
 
   .drink_info{
@@ -39,6 +40,7 @@
   .drink_menu{
     width: 48%;
     margin: 10px 1%;
+    float: left;
   }
 
   .drink_img{
@@ -61,7 +63,8 @@
 
   .drink_menu{
     width: 29%;
-    margin: 20px 2%;
+    margin: 20px;
+    float: none;
   }
 
   .drink_img{
@@ -81,7 +84,7 @@
 }
 
 .drink_menu{
-  float: left;
+  display: inline-block;
 }
 
 .drink_img{

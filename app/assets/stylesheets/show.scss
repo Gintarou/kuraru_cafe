@@ -1,0 +1,113 @@
+//タブレット
+
+  .show_info{
+    width: 670px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 200px 0 100px;
+  }
+
+  .show_left{
+    float: left;
+    width: 335px;
+  }
+
+  .show_right{
+    float: right;
+    width: 335px;
+  }
+
+
+  .show_img{
+    width: 300px;
+    height: 300px;
+    float: right;
+    padding-right: 50px;
+  }
+
+  .show_txt{
+    // padding-left: 50px;
+    float: left;
+    >p{
+      padding: 18px;
+    }
+  }
+
+
+// スマホ
+@media screen and (max-width: 670px) {
+  .show_info{
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 200px 0 100px;
+  }
+
+  .show_left{
+    width: 100%;
+    float: none;
+  }
+
+  .show_right{
+    width: 85%;
+    float: none;
+    margin: 0 auto;
+  }
+
+
+  .show_img{
+    width: 95%;
+    height: auto;
+    float: none;
+    padding: 0;
+  }
+
+  .show_txt{
+    float: none;
+    >p{
+      padding-top: 30px;
+    }
+  }
+}
+
+// PC
+@media screen and (min-width: 960px) {
+
+  .show_info{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 200px 0 100px;
+  }
+
+  .show_left{
+    float: left;
+    width: 480px;
+  }
+
+  .show_right{
+    float: right;
+    width: 480px;
+  }
+
+
+  .show_img{
+    width: 400px;
+    height: 400px;
+    float: right;
+    padding-right: 50px;
+  }
+
+  .show_txt{
+    // padding-left: 50px;
+    float: left;
+    >p{
+      padding: 30px;
+    }
+  }
+
+}
+
+.menu_price{
+  font-weight: bold;
+}

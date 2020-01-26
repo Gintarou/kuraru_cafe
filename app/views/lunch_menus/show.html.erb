@@ -1,13 +1,23 @@
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<% if @lunch_menu.lunch_image.attached? %>
-  <%= image_tag @lunch_menu.lunch_image %>
-<% end %>
-<p><%= @lunch_menu.name %></p>
-<p><%= @lunch_menu.price %></p>
-<p><%= @lunch_menu.commitment %></p>
-<p><%= @lunch_menu.allergy %></p>
+<article>
+  <section>
+    <div class="show_info">
+      <div class="show_left">
+        <% if @lunch_menu.lunch_image.attached? %>
+          <%= image_tag @lunch_menu.lunch_image, alt:"#{@lunch_menu.name}", class:"show_img" %>
+        <% end %>
+      </div>
+      <div class="show_right">
+        <div class="show_txt">
+          <p class="menu_price"><%= @lunch_menu.name %></p>
+          <p>&#xffe5;<%= @lunch_menu.price %></p>
+          <p><%= @lunch_menu.commitment %></p>
+          <p><%= @lunch_menu.allergy %></p>
+          <% if logged_in? && logged_in_as?(@user) %>
+            <li><%= link_to "edit", edit_lunch_menu_path(@lunch_menu) %></li>
+            <li><%= link_to "delete", lunch_menu_path(@lunch_menu), method: :delete %></li>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

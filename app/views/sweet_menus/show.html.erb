@@ -1,13 +1,23 @@
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<% if @sweet_menu.sweet_image.attached? %>
-  <%= image_tag @sweet_menu.sweet_image %>
-<% end %>
-<p><%= @sweet_menu.name %></p>
-<p><%= @sweet_menu.price %></p>
-<p><%= @sweet_menu.commitment %></p>
-<p><%= @sweet_menu.allergy %></p>
+<article>
+  <section>
+    <div class="show_info">
+      <div class="show_left">
+        <% if @sweet_menu.sweet_image.attached? %>
+          <%= image_tag @sweet_menu.sweet_image, alt:"#{@sweet_menu.name}", class:"show_img" %>
+        <% end %>
+      </div>
+      <div class="show_right">
+        <div class="show_txt">
+          <p class="menu_price"><%= @sweet_menu.name %></p>
+          <p>&#xffe5;<%= @sweet_menu.price %></p>
+          <p><%= @sweet_menu.commitment %></p>
+          <p><%= @sweet_menu.allergy %></p>
+          <% if logged_in? && logged_in_as?(@user) %>
+            <li><%= link_to "edit", edit_sweet_menu_path(@sweet_menu) %></li>
+            <li><%= link_to "delete", sweet_menu_path(@sweet_menu), method: :delete %></li>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
