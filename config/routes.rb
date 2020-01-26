@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :drink_menus
+  resources :drink_menus, only: [:new, :create, :edit, :update, :delete]
   resources :lunch_menus
   resources :morning_menus
   resources :sweet_menus
