@@ -8,7 +8,7 @@ class LunchMenusController < ApplicationController
   def create
     @lunch_menu = LunchMenu.new(lunch_menu_params)
     if @lunch_menu.save
-      redirect_to @lunch_menu
+      redirect_to menus_path
     else
       render 'new'
     end
@@ -25,13 +25,16 @@ class LunchMenusController < ApplicationController
   def update
     @lunch_menu = LunchMenu.find(params[:id])
     if @lunch_menu.update_attributes(lunch_menu_params)
-      redirect_to @lunch_menu
+      redirect_to menus_path
     else
       render 'edit'
     end
   end
 
-  def delete
+  def destroy
+    @lunch_menu = LunchMenu.find(params[:id])
+    @lunch_menu.delete
+    redirect_to menus_path
   end
 
   private

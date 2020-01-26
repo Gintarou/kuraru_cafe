@@ -12,7 +12,7 @@ class MorningMenusController < ApplicationController
   def create
     @morning_menu = MorningMenu.new(morning_menu_params)
     if @morning_menu.save
-      redirect_to @morning_menu
+      redirect_to menus_path
     else
       render 'new'
     end
@@ -29,14 +29,16 @@ class MorningMenusController < ApplicationController
   def update
     @morning_menu = MorningMenu.find(params[:id])
     if @morning_menu.update_attributes(morning_menu_params)
-      redirect_to @morning_menu
+      redirect_to menus_path
     else
       render 'edit'
     end
   end
 
   def delete
-
+    @morning_menu = MorningMenu.find(params[:id])
+    @morning_menu.delete
+    redirect_to menus_path
   end
 
   private

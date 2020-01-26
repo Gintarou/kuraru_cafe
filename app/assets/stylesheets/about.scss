@@ -1,9 +1,67 @@
 // タブレット
+tr{
+  height: 80px;
+  border-bottom: solid 1px #aaa !important;
+  line-height: 80px;
+}
+
+th{
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+td{
+  font-size: 16px;
+  width: 400px;
+}
+
+#about_table_sp{
+  display: none;
+}
+
+#about_table{
+  display: block;
+}
+
+#about_access_box{
+  width: 95%;
+}
 
 
 // スマホ
 @media screen and (max-width: 559px) {
+  #about_table{
+    display: none;
+  }
 
+  #about_table_sp{
+    display: block;
+  }
+
+  tr{
+    height: auto;
+    border-bottom: none !important;
+    line-height: 50px;
+    &:nth-child(2n){
+      border-bottom: solid 1px #aaa !important;
+    }
+  }
+
+  th{
+    width: auto;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  td{
+    font-size: 16px;
+    width: 400px;
+  }
+
+  #about_access_box{
+    width: 100%;
+  }
 }
 
 // PC
@@ -24,6 +82,18 @@
     font-size: 16px;
     width: 400px;
   }
+
+  #about_table_sp{
+    display: none;
+  }
+
+  #about_table{
+    display: block;
+  }
+
+  #about_access_box{
+    width: 80%;
+  }
 }
 
 #about_first{
@@ -43,10 +113,9 @@
 }
 
 #about_access_box{
-  width: 80%;
   margin: 0 auto;
   >iframe{
-    padding: 100px 0;
+    padding: 100px 0 50px;
     width: 100% !important;
     height: 500px !important;
   }

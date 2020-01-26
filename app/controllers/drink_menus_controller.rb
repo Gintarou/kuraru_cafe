@@ -8,14 +8,13 @@ class DrinkMenusController < ApplicationController
   def create
     @drink_menu = DrinkMenu.new(drink_menu_params)
     if @drink_menu.save
-      redirect_to @drink_menu
+      redirect_to menus_path
     else
       render 'new'
     end
   end
 
   def show
-    redirect_to menus_path
   end
 
   def edit
@@ -25,13 +24,16 @@ class DrinkMenusController < ApplicationController
   def update
     @drink_menu = DrinkMenu.find(params[:id])
     if @drink_menu.update_attributes(drink_menu_params)
-      redirect_to @drink_menu
+      redirect_to menus_path
     else
       render 'edit'
     end
   end
 
-  def delete
+  def destroy
+    @drink_menu = DrinkMenu.find(params[:id])
+    @drink_menu.delete
+    redirect_to menus_path
   end
 
   private

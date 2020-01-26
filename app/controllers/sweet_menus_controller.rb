@@ -12,7 +12,7 @@ class SweetMenusController < ApplicationController
   def create
     @sweet_menu = SweetMenu.new(sweet_menu_params)
     if @sweet_menu.save
-      redirect_to @sweet_menu
+      redirect_to menus_path
     else
       render 'new'
     end
@@ -29,14 +29,16 @@ class SweetMenusController < ApplicationController
   def update
     @sweet_menu = SweetMenu.find(params[:id])
     if @sweet_menu.update_attributes(sweet_menu_params)
-      redirect_to @sweet_menu
+      redirect_to menus_path
     else
       render 'edit'
     end
   end
 
-  def delete
-
+  def destroy
+    @sweet_menu = SweetMenu.find(params[:id])
+    @sweet_menu.delete
+    redirect_to menus_path
   end
 
   private
