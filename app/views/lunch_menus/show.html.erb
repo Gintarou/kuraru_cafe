@@ -13,8 +13,8 @@
           <p><%= @lunch_menu.commitment %></p>
           <p><%= @lunch_menu.allergy %></p>
           <% if logged_in? && logged_in_as?(@user) %>
-            <li><%= link_to "edit", edit_lunch_menu_path(@lunch_menu) %></li>
-            <li><%= link_to "delete", lunch_menu_path(@lunch_menu), method: :delete %></li>
+            <p><%= link_to "edit", edit_lunch_menu_path(@lunch_menu), class:"red" %></p>
+            <p><%= link_to "delete", lunch_menu_path(@lunch_menu), method: :delete, class:"red" %></p>
           <% end %>
         </div>
       </div>
