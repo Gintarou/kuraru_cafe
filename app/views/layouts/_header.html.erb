@@ -9,7 +9,7 @@
         <li><%= link_to "ABOUT", about_path %></li>
         <li><%= link_to "MENU", menus_path %></li>
         <li><%= link_to "RENTAL", rental_path %></li>
-        <li><%= link_to "EVENT", rental_path %></li>
+        <li><%= link_to "EVENT", "https://www.facebook.com/pages/Kuraru-Cafe/2372997022732741", target: "_blank" %></li>
         <% if logged_in? && logged_in_as?(@user) %>
           <li><%= link_to "NEW", new_path %></li>
           <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
@@ -30,7 +30,7 @@
           <li><%= link_to "ABOUT", about_path, class:"ham_link" %></li>
           <li><%= link_to "MENU", menus_path, class:"ham_link" %></li>
           <li><%= link_to "RENTAL", rental_path, class:"ham_link" %></li>
-          <li><%= link_to "EVENT", rental_path, class:"ham_link" %></li>
+          <li><%= link_to "EVENT", "https://www.facebook.com/pages/Kuraru-Cafe/2372997022732741", target:"_blank",  class:"ham_link" %></li>
           <% if logged_in? %>
             <li><%= link_to "NEW", new_path, class:"ham_link" %></li>
             <li><%= link_to "LOGOUT", logout_path, method: :delete, class:"ham_link" %></li>
