@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.2.2'
+# gem 'aws-sdk-s3'
+# gem 'google-cloud-storage'
+# gem 'azure-storage'
 gem 'bcrypt',         '3.1.12'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
