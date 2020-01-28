@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
-  #
+  # signup_pathを消したので書く必要なし
+  # 念の為残しておく
+
   # test "invalid signup information" do
   #   get signup_path
   #   assert_no_difference 'User.count' do
