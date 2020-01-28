@@ -19,7 +19,7 @@
         （＊開始時刻は30分刻みでお願いいたします）<br>
         ⑤以下のPDFをコピーしハンコを押した上当日にご提示ください。
       </p>
-      <%= link_to "利用規約PDF", "./../../assets/images/利用規約.pdf", target:"_blank", class:"pdf_link" %>
+      <%= link_to "利用規約PDF", {:controller => "static_pages",:action=>"downloadpdf"}, class:"pdf_link" %>
     </div>
     <div id="pdf_wrp">
       <%= image_tag "", alt:"利用規約", class:"pdf" %>

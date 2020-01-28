@@ -13,4 +13,12 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def downloadpdf
+    file_name = "kiyaku.pdf"
+    filepath = Rails.root.join('public',file_name)
+    stat = File::stat(filepath)
+    send_file(filepath, :filename => file_name, :length => stat.size)
+  end
+
 end
