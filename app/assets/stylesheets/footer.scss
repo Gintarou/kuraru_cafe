@@ -24,6 +24,16 @@
     >li{
       display: inline-block;
       padding: 30px 15px;
+      font-size: 16px;
+    }
+  }
+
+  #calendar{
+    // width: 400px;
+    text-align: center;
+    >tr, th, td{
+      text-align: center;
+      width: 1px;
     }
   }
 }
