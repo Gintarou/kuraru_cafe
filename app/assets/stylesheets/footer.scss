@@ -131,12 +131,17 @@ footer{
   .is-today {
     color: red !important ;
   }
+  th{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+  }
   td{
     width: 50px;
     height: 40px;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    font-weight: 300;
     &:nth-child(1), &:nth-child(2){
       background-color: pink;
       color: black;
