@@ -11,7 +11,7 @@
           <p class="menu_price"><%= @sweet_menu.name %></p>
           <p>&#xffe5;<%= @sweet_menu.price %></p>
           <p><%= @sweet_menu.commitment %></p>
-          <p><%= @sweet_menu.allergy %></p>
+          <p>アレルギー：<%= @sweet_menu.allergy %></p>
           <% if logged_in? && logged_in_as?(@user) %>
             <p><%= link_to "edit", edit_sweet_menu_path(@sweet_menu), class:"red" %></p>
             <p><%= link_to "delete", sweet_menu_path(@sweet_menu), method: :delete, class:"red" %></p>

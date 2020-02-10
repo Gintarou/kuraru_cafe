@@ -44,7 +44,7 @@
           <li class="drink_name"><%= dm.name %></li>
           <li class="drink_price">&#xffe5;<%= dm.price %></li>
           <li class="drink_txt"><%= dm.commitment %></li>
-          <li class="drink_txt"><%= dm.allergy %></li>
+          <li class="drink_txt">アレルギー：<%= dm.allergy %></li>
           <% if logged_in? && logged_in_as?(@user) %>
             <li><%= link_to "edit", edit_drink_menu_path(dm), class:"red" %></li>
             <li><%= link_to "delete", drink_menu_path(dm), method: :delete, class:"red" %></li>

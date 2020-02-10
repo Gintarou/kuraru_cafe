@@ -11,7 +11,7 @@
           <p class="menu_price"><%= @lunch_menu.name %></p>
           <p>&#xffe5;<%= @lunch_menu.price %></p>
           <p><%= @lunch_menu.commitment %></p>
-          <p><%= @lunch_menu.allergy %></p>
+          <p>アレルギー：<%= @lunch_menu.allergy %></p>
           <% if logged_in? && logged_in_as?(@user) %>
             <p><%= link_to "edit", edit_lunch_menu_path(@lunch_menu), class:"red" %></p>
             <p><%= link_to "delete", lunch_menu_path(@lunch_menu), method: :delete, class:"red" %></p>
